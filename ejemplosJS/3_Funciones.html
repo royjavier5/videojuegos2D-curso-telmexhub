@@ -1,24 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Funciones</title>
-        <meta charset="UTF-8"/>
-        <script>
-            //Funciones (el return y los argumentos son opcionales) 
+	<head>
+		<title>Funciones</title>
+		<meta charset="UTF-8"/>
+		<script>
+			//Funciones (el return y los argumentos son opcionales)
+			function saludar() {
+				document.write("Buenas tardes Mexico");
+			}
 
-            //llamando a la funcion
-            
-            //Funciones anonimas (lambda)
-            //Scope de una funcion (3 casos)
-                      
-            //Funcion ANONIMA como parametro de otra función
+			//llamando a la funcion
+			saludar();
+			//Funciones anonimas (lambda)
+			var r = 0;
+			var funcion_anonima = function(a, b) {
+				var r = a + b;
+				return r;
+			};
+			var multiplicar = function(a, b) {
+				var r = a * b;
+				return r;
+			};
+			var resultado = funcion_anonima(5, 8);
+			document.write("<p>resultado usando una funcion anonima: " + resultado + "</p>");
+			//Scope de una funcion (3 casos)
+			document.write("<p>Valor de r: " + r + "</p>");
+			//Funcion ANONIMA como parametro de otra función
+			var operacion = function(unaFuncion) {
+				var r = unaFuncion(8,4);
+				document.write("<p>El resultado es: " + r + "</p>"  );
+				
+			};
+			
+			operacion(funcion_anonima);
+			operacion(multiplicar);
+			operacion(function(a, b) {
+				var r = a / b;
+				return r;
+			});
+			
+			var buenos_dias = function(){
+				alert("Buenos dias amigo");
+			};
+			var buenas_noches = function(){
+				alert("Buenos noches dude");
+			};
+			
+			var saludar = function(unSaludo){
+				unSaludo();
+			};
+		
+		
+			saludar(buenos_dias);
+			saludar(buenas_noches);
+			//Esto no es valido
+			//operacion(multiplicar(4,5));
+			
+			
+			//Funcion AL VUELO como parametro de otra función
 
-            //Funcion AL VUELO como parametro de otra función
+			/*--- EJERCICIO LAMBDAS D43 ---*/
+		</script>
+	</head>
+	<body>
 
-            /*--- EJERCICIO LAMBDAS D43 ---*/
-        </script>
-    </head>
-    <body>
-
-    </body>
+	</body>
 </html>
