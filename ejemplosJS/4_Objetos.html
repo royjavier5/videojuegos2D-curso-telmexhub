@@ -5,10 +5,37 @@
         <meta charset="UTF-8"/>
         <script>
             //keyword new
-            //metodos y atributos
-
-            //JSON.stringify
-
+            var person = new Object();
+            //atributos describen al objeto
+            person.name = "Frijolito";
+            //funciones que puede realizar el objeto
+            person.spoke = function(){
+            	alert("i'm speaking so much, my name is: " + person.name);
+            };
+           
+           person.spoke();
+           
+           //Declarar un objeto con notacion JSON
+           //JavaScript Object Notation (JSON)
+           var gato = {
+           		name: "minino",
+           		maulla: function(){
+           			alert("Este gatito que se llama: " + gato.name + " maulla muchooo");
+           		},
+           		presentar : function(){
+           			alert("Mi nombre es: " + this.name);
+           		}
+           };
+          
+           //Se le pueden ir pegando mas atributos a los objetos con el operador punto
+           gato.raza = "Siames";
+           gato.presentar();
+           
+           
+           //JSON.stringify
+           document.write("<p>" + JSON.stringify(gato) + "</p>");
+           
+            
             //con llaves (2 casos)
 
             //this
