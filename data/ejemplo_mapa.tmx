@@ -5,6 +5,11 @@
  </tileset>
  <tileset firstgid="82" name="mosaicos_mario_enano_30x30" tilewidth="30" tileheight="30">
   <image source="../images/mosaicos_mario_enano_30x30.png" width="120" height="120"/>
+  <tile id="1">
+   <properties>
+    <property name="Class" value="Jugador"/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="98" name="mosaicos_enemigos_32x32" tilewidth="32" tileheight="32">
   <image source="../images/mosaicos_enemigos_32x32.png" width="96" height="96"/>
