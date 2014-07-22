@@ -5,6 +5,11 @@
  </tileset>
  <tileset firstgid="82" name="mosaicos_mario_enano_30x30" tilewidth="30" tileheight="30">
   <image source="../images/mosaicos_mario_enano_30x30.png" width="120" height="120"/>
+  <tile id="1">
+   <properties>
+    <property name="Class" value="Jugador"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="Background" width="60" height="13">
   <properties>
@@ -2368,6 +2373,6 @@
   </data>
  </layer>
  <objectgroup name="Sprites" width="60" height="13">
-  <object gid="83" x="66" y="94"/>
+  <object gid="83" x="823" y="257"/>
  </objectgroup>
 </map>
